@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 할 일 - To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Image with Blur -->
+    <div class="bg-overlay"></div>
+    <!-- Dark Overlay -->
+    <div class="leaf-overlay"></div>
+    
+    <div class="container">
+        <!-- Title Section -->
+        <section class="title-section">
+            <h1 class="title-en">TO DO LIST</h1>
+            <h2 class="title-kr">오늘 할 일</h2>
+        </section>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">전체</button>
+            <button class="filter-btn" data-category="self">자기계발</button>
+            <button class="filter-btn" data-category="home">가정</button>
+            <button class="filter-btn" data-category="work">업무</button>
+            <button class="filter-btn" data-category="other">기타</button>
+        </div>
+
+        <!-- Todo List -->
+        <main class="todo-container">
+            <ul class="todo-list" id="todoList">
+                <!-- Todo items will be inserted here -->
+            </ul>
+
+            <!-- Add Todo Button -->
+            <button class="add-todo-btn" id="addTodoBtn">
+                <span class="plus-icon">+</span>
+                <span>새로운 할 일 추가</span>
+            </button>
+        </main>
+
+        <!-- Footer Quote -->
+        <footer class="footer">
+            <p class="quote">🏐 어려울 거 알았잖아, 해보자! -김연경</p>
+        </footer>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">할 일 추가</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <form id="todoForm">
+                <div class="form-group">
+                    <label for="todoText">할 일</label>
+                    <input type="text" id="todoText" placeholder="할 일을 입력하세요" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="todoDate">날짜</label>
+                        <input type="date" id="todoDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="todoTime">시간</label>
+                        <input type="time" id="todoTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>카테고리</label>
+                    <div class="category-select">
+                        <label class="category-option">
+                            <input type="radio" name="category" value="self" checked>
+                            <span class="category-label self">자기계발</span>
+                        </label>
+                        <label class="category-option">
+                            <input type="radio" name="category" value="home">
+                            <span class="category-label home">가정</span>
+                        </label>
+                        <label class="category-option">
+                            <input type="radio" name="category" value="work">
+                            <span class="category-label work">업무</span>
+                        </label>
+                        <label class="category-option">
+                            <input type="radio" name="category" value="other">
+                            <span class="category-label other">기타</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelBtn">취소</button>
+                    <button type="submit" class="btn-submit">저장</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="deleteModalOverlay">
+        <div class="modal delete-modal">
+            <div class="modal-header">
+                <h3>삭제 확인</h3>
+            </div>
+            <p class="delete-message">이 할 일을 삭제하시겠습니까?</p>
+            <div class="form-actions">
+                <button type="button" class="btn-cancel" id="cancelDelete">취소</button>
+                <button type="button" class="btn-delete" id="confirmDelete">삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
+
