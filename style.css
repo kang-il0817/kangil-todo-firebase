@@ -30,7 +30,7 @@
 }
 
 body {
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     min-height: 100vh;
     color: var(--text-primary);
     position: relative;
@@ -114,7 +114,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.15);
     color: var(--text-white);
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
     border-radius: 25px;
@@ -249,7 +249,7 @@ body {
 }
 
 .todo-time {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-blue);
@@ -352,7 +352,7 @@ body {
     justify-content: center;
     gap: 10px;
     color: rgba(255, 255, 255, 0.8);
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     transition: var(--transition-smooth);
@@ -380,7 +380,7 @@ body {
 }
 
 .quote {
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.7);
@@ -435,7 +435,7 @@ body {
 }
 
 .modal-header h3 {
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--primary-blue);
@@ -487,7 +487,7 @@ body {
     padding: 14px 16px;
     border: 2px solid rgba(61, 61, 158, 0.15);
     border-radius: 12px;
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
     background: white;
     color: var(--text-primary);
@@ -551,7 +551,7 @@ body {
     padding: 16px 24px;
     border: none;
     border-radius: 12px;
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
